@@ -3,7 +3,7 @@
 - Wireguard not support windows filter driver for network interface. The real problem come from Wintun driver.<br/>
 make traffic bypass 3rd party firewall or any software that use windows filter driver.<br/>
 
-![sample pic](https://github.com/lessload/wireguard-wintun-problem/blob/main/sample.jpg?raw=true)
+![sample pic](https://github.com/lessload/wireguard-windows--------------Big-Problem/blob/master/sample.jpg?raw=true)
 
 As you can see in picture. wintun driver not support filter driver and make all apps bypass 3rd party firewall.Cause wintun can not use in many company. <br/>
 TAP-Windows support filter driver, making it widely used.<br/>
