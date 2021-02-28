@@ -1,25 +1,17 @@
-# [WireGuard](https://www.wireguard.com/) for Windows
+# Wireguard problem on windows
 
-This is a fully-featured WireGuard client for Windows that uses [Wintun](https://www.wintun.net/). It is the only official and recommended way of using WireGuard on Windows.
+- Wireguard not support windows filter driver for network interface. The real problem come from Wintun driver.<br/>
+make traffic bypass 3rd party firewall or any software that use windows filter driver.<br/>
 
-## Download &amp; Install
+![sample pic](https://github.com/lessload/wireguard-wintun-problem/blob/main/sample.jpg?raw=true)
 
-If you've come here looking to simply run WireGuard for Windows, [the main download page has links](https://www.wireguard.com/install/). There you will find two things:
+As you can see in picture. wintun driver not support filter driver and make all apps bypass 3rd party firewall.Cause wintun can not use in many company. <br/>
+TAP-Windows support filter driver, making it widely used.<br/>
+Many user found this preblem. someone report it to dev team. but seem like developer not care to fix this.<br/>
+If you know how to fix it. Please send code to them.<br/>
+https://github.com/WireGuard/wintun<br/>
 
-- [The WireGuard Installer](https://download.wireguard.com/windows-client/wireguard-installer.exe) &ndash; This selects the most recent version for your architecture, downloads it, checks signatures and hashes, and installs it.
-- [Standalone MSIs](https://download.wireguard.com/windows-client/) &ndash; These are for system admins who wish to deploy the MSIs directly. For most end users, the ordinary installer takes care of downloading these automatically.
-
-## Documentation
-
-In addition to this [`README.md`](README.md), the following documents are also available:
-
-- [`adminregistry.md`](docs/adminregistry.md) &ndash; A list of registry keys settable by the system administrator for changing the behavior of the application.
-- [`attacksurface.md`](docs/attacksurface.md) &ndash; A discussion of the various components from a security perspective, so that future auditors of this code have a head start in assessing its security design.
-- [`buildrun.md`](docs/buildrun.md) &ndash; Instructions on building, localizing, running, and developing for this repository.
-- [`enterprise.md`](docs/enterprise.md) &ndash; A summary of various features and tips for making the application usable in enterprise settings.
-- [`netquirk.md`](docs/netquirk.md) &ndash; A description of various networking quirks and "kill-switch" semantics.
-
-## License
+## Wireguard License
 
 This repository is MIT-licensed.
 
